@@ -63,7 +63,7 @@
 	}
 
 
-	ol {
+	ol, ul {
 		list-style: none;
 		margin:0px; padding:0px;
 	}
@@ -79,13 +79,25 @@
 		display: inline-block;
 	}
 	#sample {
-		color: white;
-		
-		width: 100px;
-		height: 100px;
-		left: 120px;
+		display: none;
+		width: 93%;
+		height: 100%;
+		text-align: center;
 	}
-
+	#sample li {
+				margin: 20px 0 20px 0;
+				font-family: 'Oswald', sans-serif;
+	}
+	a {
+		text-decoration: none;
+				color: white;
+	}
+	.one li img:hover {
+		-webkit-filter: brightness(80%) opacity() grayscale(0);
+	}
+		#gallery li:hover {
+		-webkit-filter: brightness(80%) opacity() grayscale(0);
+	}
 /* css_contents*/
 #contents{margin:50px 50px ;}
 	p{
@@ -156,6 +168,15 @@ $(document).ready(function(){
         $("#hide").hide();
         $("#show img").show();
     });
+});
+
+  $(function(){
+     $("#gallery").hover(function(){
+   $("#sample",this).slideDown("fast");
+},
+function(){
+  $("#sample",this).slideUp("fast");
+});
 
 });
 </script>
@@ -179,7 +200,11 @@ $(document).ready(function(){
 			<li id="gallery">
 				<a href=#><img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfVnNNUmZXU1VrWVE" alt=""></a>
 				<div id="sample">
-				
+					<ul>
+						<li><a href="#">flower</a></li>
+						<li><a href="#">nature</a></li>
+						<li><a href="#">etc</a></li>
+					</ul>
 				</div>
 			</li>
 			<li>
