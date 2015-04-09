@@ -1,28 +1,27 @@
-<!DOCTYPE HTML>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>MUNI</title>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <script type='application/javascript' src='/path/to/fastclick.js'></script>
-
-<style type="text/css">
-	body {font: 1em Arial;}
-
-/* css_menu*/
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+<title>MUNI</title>
+<style>
 	.one {
 		background-color: #33334c;
-		width: 80px;
+		width: 10%;
 		height: 90%;
 		position: absolute;
 		left: -200px;
 		bottom: 0;
-		box-shadow: 4px 1px 10px #a1a1a1;
 		position: fixed;
+	box-shadow: 4px 1px 5px #888888;
+
 	}
 
 	#show, #hide  {
-		width: 80px;
+		width: 10%;
 		position: absolute;
 		height: 100%;
 		left: 0;
@@ -35,6 +34,7 @@
 	#show:hover, #hide:hover  {
 		-webkit-filter: brightness(100%) opacity() grayscale(0);
 	}
+
 	#hide {
 		display: none;
 	}
@@ -48,7 +48,8 @@
 		left: 0;
 		top: 0;
 		background-color: white;
-		box-shadow: 0px 5px 10px #a1a1a1;
+		box-shadow: 0px 10px 5px #888888;
+
 	}
 	header h1 {
 		text-align: center;
@@ -57,7 +58,7 @@
 	}
 
 	#show img, #hide img {
-		width: 30px;
+		width: 20%;
 		margin-left: 35%;
 		float: left;
 		margin-top: 18%;
@@ -71,13 +72,14 @@
 	}
 
 	li img {
-		width: 30px;
+		width: 20%;
 		margin-left: 36%;
 		padding: 35% 0 35% 0;
 		float: left;
 		display: block;
+
 	}		
-	#menu > div {
+	div {
 		display: inline-block;
 	}
 	#sample {
@@ -100,8 +102,15 @@
 		#gallery li:hover {
 		-webkit-filter: brightness(80%) opacity() grayscale(0);
 	}
-/* css_contents*/
-#contents{margin:50px 50px ;}
+	.content {
+		position: absolute;
+		top: 10%;
+		bottom: 0;
+		overflow: hidden;
+		left: 0;
+		width: 100%;
+	}
+	#contents{margin:50px 50px ;}
 	p{
 		color:green;
 		margin-left: 100px;
@@ -116,16 +125,15 @@
 			display:none;
 		}
 
-    #clickMe1, #clickMe2 ,#clickMe3,#clickMe4 {
+    #clickMe1, #clickMe2 ,#clickMe3,#clickMe4,#clickMe5,#clickMe6,#clickMe7,#clickMe8,#clickMe9 {
     	width: 250px;
     	height: 250px;
-
 		margin-top: 10px;
 		border-radius: 50%;
     }
     
  #clickMe1{background-image: url("https://s-media-cache-ak0.pinimg.com/736x/23/49/71/234971542e3f8517dbb967de940e3dbf.jpg");
- transition:3s;
+ transition:1s;
 
 }
 #clickMe1:hover {
@@ -134,36 +142,88 @@
 
 }
 
- #clickMe2{background-image: url("https://s-media-cache-ak0.pinimg.com/736x/12/70/0f/12700ff6f9af505c52fe56049d55236e.jpg");}
- #clickMe3{background-image: url("https://s-media-cache-ak0.pinimg.com/236x/63/fe/dc/63fedcb061d8371d803317196cd4bc60.jpg");}
- #clickMe4{background-image: url("https://s-media-cache-ak0.pinimg.com/736x/96/cc/79/96cc79dd6e3742a27e61ded49db0c0e2.jpg");}
+ #clickMe2{background-image: url("https://s-media-cache-ak0.pinimg.com/736x/12/70/0f/12700ff6f9af505c52fe56049d55236e.jpg");
+ transition:1s;}
+ #clickMe2:hover {
+	opacity: 0.5;
+	 -webkit-transition: opacity .2s ease-out;
 
- #picframe1, #picframe2 ,#picframe3,#picframe4 {
-    	width: 250px;
-		margin-top: 10px;
-		border:none;
-		display: none;
-    }
-    
- #picframe1{background-image: url("https://s-media-cache-ak0.pinimg.com/736x/23/49/71/234971542e3f8517dbb967de940e3dbf.jpg");}
- #picframe2{background-image: url("https://s-media-cache-ak0.pinimg.com/736x/12/70/0f/12700ff6f9af505c52fe56049d55236e.jpg");}
- #picframe3{background-image: url("https://s-media-cache-ak0.pinimg.com/236x/63/fe/dc/63fedcb061d8371d803317196cd4bc60.jpg");}
- #picframe4{background-image: url("https://s-media-cache-ak0.pinimg.com/736x/96/cc/79/96cc79dd6e3742a27e61ded49db0c0e2.jpg");}
+}
+ #clickMe3{background-image: url("https://s-media-cache-ak0.pinimg.com/236x/63/fe/dc/63fedcb061d8371d803317196cd4bc60.jpg");
+ transition:1s;}
+ #clickMe3:hover {
+	opacity: 0.5;
+	 -webkit-transition: opacity .2s ease-out;
+
+}
+ #clickMe4{background-image: url("https://s-media-cache-ak0.pinimg.com/736x/96/cc/79/96cc79dd6e3742a27e61ded49db0c0e2.jpg");
+ transition:1s;}
+ #clickMe4:hover {
+	opacity: 0.5;
+	 -webkit-transition: opacity .2s ease-out;
+
+}
+ #clickMe5{background-image: url("https://s-media-cache-ak0.pinimg.com/736x/96/cc/79/96cc79dd6e3742a27e61ded49db0c0e2.jpg");
+ transition:1s;}
+ #clickMe5:hover {
+	opacity: 0.5;
+	 -webkit-transition: opacity .2s ease-out;
+
+}
+ #clickMe6{background-image: url("https://s-media-cache-ak0.pinimg.com/736x/96/cc/79/96cc79dd6e3742a27e61ded49db0c0e2.jpg");
+ transition:1s;}
+ #clickMe6:hover {
+	opacity: 0.5;
+	 -webkit-transition: opacity .2s ease-out;
+
+}
+ #clickMe7{background-image: url("https://s-media-cache-ak0.pinimg.com/736x/96/cc/79/96cc79dd6e3742a27e61ded49db0c0e2.jpg");
+ transition:1s;}
+ #clickMe7:hover {
+	opacity: 0.5;
+	 -webkit-transition: opacity .2s ease-out;
+
+}
+ #clickMe8{background-image: url("https://s-media-cache-ak0.pinimg.com/736x/96/cc/79/96cc79dd6e3742a27e61ded49db0c0e2.jpg");
+ transition:1s;}
+ #clickMe8:hover {
+	opacity: 0.5;
+	 -webkit-transition: opacity .2s ease-out;
+
+}
+ #clickMe9{background-image: url("https://s-media-cache-ak0.pinimg.com/736x/96/cc/79/96cc79dd6e3742a27e61ded49db0c0e2.jpg");
+ transition:1s;}
+ #clickMe9:hover {
+	opacity: 0.5;
+	 -webkit-transition: opacity .2s ease-out;
+
+}
 
 
-  
-  #picframe1, #picframe2 ,#picframe3, #picframe4 > img {  
-  	width: 250px;
-	margin-top: 10px;
-	
-  }	
+
+
+	h2 {
+		text-align: center;
+		color: white;
+		font-size: 60px;
+		font-family: 'Permanent Marker', cursive;
+	}
+	.title {
+		position: absolute;
+		z-index: 3;
+		left: 47%;
+		top: 25%;
+
+	}
+
 </style>
 
-</head>
 
+
+</head>
 <body>
 
-	<div id="menu">
+
 	<script>
 window.addEventListener('load', function() {
     new FastClick(document.body);
@@ -181,6 +241,7 @@ $(document).ready(function(){
         $("#hide").hide();
         $("#show img").show();
     });
+
 });
 
   $(function(){
@@ -190,21 +251,49 @@ $(document).ready(function(){
 function(){
   $("#sample",this).slideUp("fast");
 });
-
-});
+ });
 </script>
 <header>
-
 	<h1>MUNI</h1>
-
-<div id="show">
-		<div id="show">
+	<div id="show">
 		<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfQWZGMm4wclhOVGs" alt="">
 	</div>
 	<div id="hide">
 		<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfV0dfX2I3MXNGbGM" alt="">
 	</div>
 </header>
+
+
+	<div id="contents">
+		<div id="clickMe1">
+			<p>sample1</p>
+		</div>
+		<div id="clickMe2">
+			<p>sample2</p>
+		</div>
+		<div id="clickMe3">
+			<p>sample3</p>
+		</div>
+		<div id="clickMe4">
+			<p>sample4</p>
+		</div>
+		<div id="clickMe4">
+			<p>sample5</p>
+		</div>
+		<div id="clickMe4">
+			<p>sample6</p>
+		</div>
+		<div id="clickMe4">
+			<p>sample7</p>
+		</div>
+		<div id="clickMe4">
+			<p>sample8</p>
+		</div>
+		<div id="clickMe4">
+			<p>sample9</p>
+		</div>
+	</div>
+
 	<div class="one">
 		<ol>
 			<li>
@@ -216,7 +305,7 @@ function(){
 					<ul>
 						<li><a href="#">flower</a></li>
 						<li><a href="#">nature</a></li>
-						<li><a href="#">etc</a></li>
+						<li><a href="muni-gallary.html">etc</a></li>
 					</ul>
 				</div>
 			</li>
@@ -228,69 +317,5 @@ function(){
 			</li>
 		</ol>
 	</div>
-
-<div id="contents">
-
-		<div id="clickMe1">
-			<p>sample1</p></div>
-
-		
-		<script src="scripts/jquery-1.6.2.min.js"></script>
-		<script>
-			$(document).ready(function(){
-				$("#clickMe1").click(function() {
-					$("img").fadeIn(1000);
-					$("#picframe1").slideToggle("slow");
-				});
-			});
-		</script>
-
-
-<div id="clickMe2">
-			<p>sample2</p></div>
-		<div id="picframe2">
-			<img src="https://s-media-cache-ak0.pinimg.com/736x/12/70/0f/12700ff6f9af505c52fe56049d55236e.jpg">
-		</div>
-		<script src="scripts/jquery-1.6.2.min.js"></script>
-		<script>
-			$(document).ready(function(){
-				$("#clickMe2").click(function() {
-					$("img").fadeIn(1000);
-					$("#picframe2").slideToggle("slow");
-				});
-			});
-		</script>
-
-		<div id="clickMe3">
-			<p>sample3</p></div>
-		<div id="picframe3">
-			<img src="https://s-media-cache-ak0.pinimg.com/236x/63/fe/dc/63fedcb061d8371d803317196cd4bc60.jpg">
-		</div>
-		<script src="scripts/jquery-1.6.2.min.js"></script>
-		<script>
-			$(document).ready(function(){
-				$("#clickMe3").click(function() {
-					$("img").fadeIn(1000);
-					$("#picframe3").slideToggle("slow");
-				});
-			});
-		</script>
-
-		<div id="clickMe4">
-			<p>sample4</p></div>
-		<div id="picframe4">
-			<img src="https://s-media-cache-ak0.pinimg.com/736x/96/cc/79/96cc79dd6e3742a27e61ded49db0c0e2.jpg">
-		</div>
-		<script src="scripts/jquery-1.6.2.min.js"></script>
-		<script>
-			$(document).ready(function(){
-				$("#clickMe4").click(function() {
-					$("img").fadeIn(1000);
-					$("#picframe4").slideToggle("slow");
-				});
-			});
-		</script>
-		 </div>
-
 </body>
 </html>
