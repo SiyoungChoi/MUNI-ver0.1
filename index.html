@@ -110,7 +110,7 @@
 	}
 
 	.back{
-		width: 100%;
+		width: 3000px;
 		margin-left: auto;
 		margin-right: auto;
 		display: block;
@@ -157,8 +157,6 @@
 				}
 </style>
 
-
-
 </head>
 <body>
 
@@ -167,6 +165,7 @@
 window.addEventListener('load', function() {
     new FastClick(document.body);
 }, false);
+
 $(document).ready(function(){
     $("#show").click(function(){
         $(".one").animate({left: 0}, 400 );
@@ -191,6 +190,30 @@ function(){
   $("#sample",this).slideUp("fast");
 });
  });
+
+/*배경 무작위*/
+$(document).ready(function(){
+
+	var backclix = 0;
+	
+$("#back").click(function(){
+		if(backclix < 9){
+	 $("#back").animate({left:"-=370px"},500);
+        backclix+=1;
+        }
+        else{
+        $("#back").animate({left:"0px"},500);
+        backclix =0;
+        }
+	});
+
+
+
+		});
+	};	
+	
+});
+
 </script>
 <header>
 	<h1>MUNI</h1>
@@ -205,7 +228,7 @@ function(){
 
 	<div class="title"><h2>muni</h2>
 		<input type="text" name="ID" value=""></div>
-<img class="back" src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfamhfck9VbVNIVnM" alt="">
+<img class="back" src="http://postfiles16.naver.net/20150416_31/si035_14291792120101Rqte_JPEG/patternset2.jpg?type=w3" alt="">
 
 
 <div class="sns">
