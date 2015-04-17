@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
+<!DOCTYPE HTML>
+<html><head>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script type='application/javascript' src='/path/to/fastclick.js'></script>
-<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+<script type="application/javascript" src="/path/to/fastclick.js"></script>
+<link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet" type="text/css">
 <title>MUNI</title>
 <style>
 	.one {
@@ -159,7 +158,7 @@
 
 
 </head>
-<body>
+<body data-pinterest-extension-installed="cr1.36">
 
 
 	<script>
@@ -189,15 +188,30 @@ $(document).ready(function(){
 function(){
   $("#sample",this).slideUp("fast");
 });
+     $(document).ready(function(){
+	var backclix = 0;
+$("#back").click(function(){
+		if(backclix < 3){
+	 $("#back").animate({left:"+-=1000px"}, 500 );
+        backclix+=1;
+        }
+        else{
+        $("#back").animate({left:"0px"}, 500 );
+        backclix +=0;
+        }
+	});
+});
+
+
  });
 </script>
 <header>
 	<h1>MUNI</h1>
 	<div id="show">
-		<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfQWZGMm4wclhOVGs" alt="">
+		<img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfQWZGMm4wclhOVGs" alt="">
 	</div>
 	<div id="hide">
-		<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfV0dfX2I3MXNGbGM" alt="">
+		<img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfV0dfX2I3MXNGbGM" alt="">
 	</div>
 </header>
 <div class="content">
@@ -205,45 +219,25 @@ function(){
 	<div class="title"><h2>muni</h2>
 		<input type="text" name="ID" value=""></div>
 
-<img class="back" src="src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfMU5QN1FUdl9mVmM" alt="">
+<img class="back" src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfMU5QN1FUdl9mVmM" alt="">
+
 
 <!--배경 바꾸기 자바스크립트-->
 
-	        <script>
-$(document).ready(function(){
-
-	var backclix = 0;
-	
-$("#back").click(function(){
-		if(backclix < 3){
-	 $("#back").animate({left:"-=1000px"},500);
-        backclix+=1;
-        };
-        else{
-        $("#back").animate({left:"0px"},500);
-        backclix =0;
-        };
-	});
-
-});
-
-			</script>
-
-
 <div class="sns">
-<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfejVBQTV4SFo5bzg" alt="">
-<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfejczZ09tRnl6Y1E" alt="">
-<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfdFNpSDN1cGhMTk0" alt="">
+<img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfejVBQTV4SFo5bzg" alt="">
+<img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfejczZ09tRnl6Y1E" alt="">
+<img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfdFNpSDN1cGhMTk0" alt="">
 </div>
 
 </div>
 	<div class="one">
 		<ol>
 			<li>
-				<a href="base home.html"><img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfZ19oT1JNVnhEVjQ" alt=""></a>
+				<a href="base home.html"><img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfZ19oT1JNVnhEVjQ" alt=""></a>
 			</li>
 			<li id="gallery">
-				<a href=#><img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfVnNNUmZXU1VrWVE" alt=""></a>
+				<a href="#"><img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfVnNNUmZXU1VrWVE" alt=""></a>
 				<div id="sample">
 					<ul>
 						<li><a href="#">flower</a></li>
@@ -253,13 +247,14 @@ $("#back").click(function(){
 				</div>
 			</li>
 			<li>
-				<a href=#><img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfTU1nOG5NaXhPcmc" alt=""></a>
+				<a href="#"><img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfTU1nOG5NaXhPcmc" alt=""></a>
 			</li>
 			<li>
-				<a href=#><img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfekpWSjhXT0ZQazA" alt=""></a>
+				<a href="#"><img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfekpWSjhXT0ZQazA" alt=""></a>
 			</li>
 		</ol>
 	</div>
 
-</body>
-</html>
+
+
+<span style="height: 20px; width: 40px; position: absolute; opacity: 0.85; z-index: 8675309; display: none; cursor: pointer; border: none; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAUCAYAAAD/Rn+7AAADU0lEQVR42s2WXUhTYRjHz0VEVPRFUGmtVEaFUZFhHxBhsotCU5JwBWEf1EWEEVHQx4UfFWYkFa2biPJiXbUta33OXFtuUXMzJ4bK3Nqay7m5NeZq6h/tPQ+xU20zugjOxR/+7/O8539+5znnwMtNTExwJtMb3L/fiLv3botCSmUjeCaejTOb39AiFothfHxcFIrHY8RksZjBsckJcOIRMfFsHD/SsbExUYpnI8DR0dGUGjSb0byhEJp5Uqg5CTSzc2CQleJbMEj9/ywBcGRkJEk9DQqouEVQT1sK444yWI9UonmTjGqauVLEIlHa9x8lAMbj8SSpp0rwKGMVvg8P46vbg0C7na8z8JsMcgHe7jlEa+edRhiLy8n/TUMfu6EvLElk+U0WtGwrTrdfAGQf5J8iiK4LVzDU28t8JtMSocf8E+l68myaNFXm/6rXslLK7ay5TOunuRvZWpJuvwAYjUaTpOIWoquuAZ219RTaxKYp9BbjycoN5FvL9qH9TBX5rvoGdJythvXYSTxdtRnWylO/ZdqrLsGwszzhWQ593z2KlAwCYCQSSZJ6ehZ0W7bD9VBLgN0NCqr3qR7R2rBrL3pu3Sb/7nDlz2uy6cG0OXk0GTbZXzNp8trsPAQdTj6frlWzN2DcXZGKQQAMh8NJ6rpyHe+PnkCr/CAFdZyvpfpjuvkifLF9wIt1Wwlo0OHie1RvWrKa93RjzfzliTzPKz3ltB0/Tevmwp14wGUgHAzSOoUEwFAolFaaBSuhnslPRkJexUJtZ6v5HtUeLswl33n1BgEY5fvhs9sJ3FAiT+QYyyvoAQJuD0KBAFRTJNAuz5/s3gJgMBhMJwrVFRThM5tY5zUF/A4X1f2fvQTRLCuBreoim0YmAbqNJryvPEXeeq46kaNdkQ/1HCncbJKPs9ZSv2VHGfWsZ2hfkhKAfr8/pdxWKx4wwD69PmVfNSOL+lr2w+gYqHpWDtXt1xQ8AMlWU0e1lqLd/APRHoP8AJqWrQG9gYxcPMsvSJUvAA4MDKTUJ7MZLaVy8v+qT21tcDx/OemePr0RTkNrur4A6PP5xCgBsL+/X4wiQDpuuVxOeL1eMYmYeDY6sOp0z+B0OuHxeEQhxkJMFosJiSO/UinOI/8Pc+l7KKArAT8AAAAASUVORK5CYII=); background-color: transparent;"></span></body></html>
