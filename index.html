@@ -204,7 +204,30 @@ function(){
 
 	<div class="title"><h2>muni</h2>
 		<input type="text" name="ID" value=""></div>
+<div id ="back>
 <img class="back" src="http://postfiles16.naver.net/20150416_31/si035_14291792120101Rqte_JPEG/patternset2.jpg?type=w3" alt="">
+</div>
+<!--배경 바꾸기 자바스크립트-->
+		script type="text/javascript" src="scripts/jquery-1.6.2.min.js"></script>
+	        <script type="text/javascript">
+$(document).ready(function(){
+
+	var backclix = 0;
+	
+$("#back").click(function(){
+		if(backclix < 3){
+	 $("#back").animate({left:"-=1000px"},500);
+        backclix+=1;
+        };
+        else{
+        $("#back").animate({left:"0px"},500);
+        backclix =0;
+        };
+	});
+
+});
+
+			</script>
 
 
 <div class="sns">
@@ -238,24 +261,5 @@ function(){
 		</ol>
 	</div>
 
-			<script>
-$(document).ready(function(){
-
-	var backclix = 0;
-	
-$("#back").click(function(){
-		if(backclix < 3){
-	 $("#back").animate({left:"-=1000px"},500);
-        backclix+=1;
-        };
-        else{
-        $("#back").animate({left:"0px"},500);
-        backclix =0;
-        };
-	});
-
-});
-
-			</script>
 </body>
 </html>
