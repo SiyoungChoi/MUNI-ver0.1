@@ -243,13 +243,13 @@ $(document).ready(function(){
 
 	var backclix = 0;
 	
-$(".back").click(function(){
+$("#back").click(function(){
 		if(backclix < 2){
-	 $(".back").animate({left:"-=1000px"},500);
+	 $("#back").animate({left:"-=1000px"},500);
         backclix+=1;
         };
         else{
-        $(".back").animate({left:"0px"},500);
+        $("#back").animate({left:"0px"},500);
         backclix =0;
         };
 	});
