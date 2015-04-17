@@ -6,6 +6,12 @@
 <link href="http://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet" type="text/css">
 <title>MUNI</title>
 <style>
+.face{
+	position:relative;
+	left:0px;
+	top:0px;	
+	z-index: 1;
+}
 	.one {
 		background-color: #33334c;
 		width: 10%;
@@ -14,6 +20,7 @@
 		left: -200px;
 		bottom: 0;
 	box-shadow: 4px 1px 5px #888888;
+	z-index: 4;
 	}
 
 	#show, #hide  {
@@ -181,22 +188,24 @@ $(document).ready(function(){
 
 });
 
-  $(function(){
-     $("#gallery").hover(function(){
-   $("#sample",this).slideDown("fast");
-},
-function(){
-  $("#sample",this).slideUp("fast");
-});
-     $(document).ready(function(){
+		  $(function(){
+		     $("#gallery").hover(function(){
+		   $("#sample",this).slideDown("fast");
+		},
+		function(){
+		  $("#sample",this).slideUp("fast");
+		});
+
+
+     $(function(){
 	var backclix = 0;
-$("#back").click(function(){
+$(".back").click(function(){
 		if(backclix < 3){
-	 $("#back").animate({left:"+-=1000px"}, 500 );
+	 $(".back").animate({left:"+-=1000px"}, 500 );
         backclix+=1;
         }
         else{
-        $("#back").animate({left:"0px"}, 500 );
+        $(".back").animate({left:"0px"}, 500 );
         backclix +=0;
         }
 	});
@@ -204,6 +213,23 @@ $("#back").click(function(){
 
 
  });
+</script>
+		
+<script>
+	$(document).ready(function(){
+		var headclix = 0;
+		$("#back").click(function() {			
+			if (headclix < 9){
+				$("#back").animate({left: "+=-367px"}, 500 );
+				headclix+=1;
+				}
+
+			else{
+				$("#back").animate({left: "0px"}, 500 );
+				headclix += 0;
+				}
+		});
+	});
 </script>
 <header>
 	<h1>MUNI</h1>
@@ -219,7 +245,8 @@ $("#back").click(function(){
 	<div class="title"><h2>muni</h2>
 		<input type="text" name="ID" value=""></div>
 
-<img class="back" src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfMU5QN1FUdl9mVmM" alt="">
+	<div id="back" class="face"><img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfMU5QN1FUdl9mVmM"></div>
+			<script src="scripts/jquery-1.6.2.min.js"></script>
 
 
 <!--배경 바꾸기 자바스크립트-->
