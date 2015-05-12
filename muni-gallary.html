@@ -7,6 +7,7 @@
 <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="wookmark.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MUNI</title>
 <style>
 	.one {
@@ -120,6 +121,7 @@
 	#contents li {
 		float: left;
 		width: 250px;
+		height: 250px;
 		border-radius: 5%;
 		margin: 20px;
 		box-shadow: 4px 1px 5px #888888;
@@ -131,7 +133,7 @@
 
 	#contents li img {
 		width: 100%;
-		height: 100%;
+    	height: 200px;
 		border-radius: 5% 5% 0 0;
 
 
@@ -168,7 +170,6 @@
  {transition:.3s;}
  #clickMe8
  {transition:.3s;}
-
  #clickMe9
  {transition:.3s;}
 
@@ -189,7 +190,56 @@
 		top: 25%;
 
 	}
+@media screen and (min-width:600px) {
+   .one {
+		background-color: #33334c;
+		width: 10%;
+		height: 100%;
+		position: absolute;
+		left: -200px;
+		bottom: 0;
+		box-shadow: 4px 1px 5px #888888;
+	}
 
+}
+@media screen and (max-width:599px) {
+  	.one {
+		background-color: #33334c;
+		width: 30%;
+		height: 90%;
+		position: absolute;
+		left: -1000px;
+		bottom: 0;
+	box-shadow: 4px 1px 5px #888888;
+	z-index: 4;
+	}
+	#show, #hide  {
+		width: 30%;
+	}
+
+	header {
+		height: 19%;
+			}
+	header h1 {
+		text-align: center;
+		vertical-align: middle;
+		top: 19%;
+		position: relative;
+
+	}
+		#show img, #hide img {
+	top: 25%;
+	position: absolute;
+	}
+
+.sns {
+		left: 37%;
+	}
+.title {
+		left: 34%;
+	}
+
+}
 </style>
 
 
@@ -197,16 +247,7 @@
 </head>
 <body>
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-62493734-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 <script>
 	window.addEventListener('load', function() {
 	    new FastClick(document.body);
@@ -255,7 +296,7 @@
 		<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfV0dfX2I3MXNGbGM" alt="">
 	</div>
 </header>
-
+ 
 	<div id="contents">
 		<ol>
 			<li>
@@ -322,7 +363,7 @@
 		
 		
 		
-		
+
 		
 	</div>
 
