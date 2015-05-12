@@ -4,6 +4,13 @@
 <script type="application/javascript" src="/path/to/fastclick.js"></script>
 <link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet" type="text/css">
+<!-- jQuery library -->
+<script type = 'text/javascript' src = 'jquery-1.4.min.js'></script>
+
+<!-- iosslider plugin -->
+<script type = 'text/javascript' src = 'jquery.iosslider.js'></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="scripts/jquery-1.6.2.min.js"></script>
 <title>MUNI</title>
 <style>
 .face{
@@ -12,15 +19,15 @@
 	top:0px;	
 	z-index: 1;
 }
+
 	.one {
 		background-color: #33334c;
 		width: 10%;
-		height: 90%;
+		height: 100%;
 		position: absolute;
 		left: -200px;
 		bottom: 0;
-	box-shadow: 4px 1px 5px #888888;
-	z-index: 4;
+		box-shadow: 4px 1px 5px #888888;
 	}
 
 	#show, #hide  {
@@ -119,7 +126,9 @@
 		margin-left: auto;
 		margin-right: auto;
 		display: block;
+		z-index: -10;
 		-webkit-filter: blur(6px); -moz-filter: blur(6px); -o-filter: blur(6px); -ms-filter: blur(6px); filter: blur(6px);
+		-webkit-filter: brightness(96%) opacity() grayscale(0);
 	}
 
 	h2 {
@@ -133,12 +142,11 @@
 		z-index: 3;
 		left: 47%;
 		top: 25%;
-
 	}
 
 .sns {
 		position: absolute;
-		z-index: 2;
+		z-index: 4;
 		left: 48%;
 		top: 80%;
 
@@ -153,33 +161,72 @@
 			float: left;
 			text-align: center;
 			margin-right: 10px;
-
 			box-shadow: 3px 3px 20px #888888;
 				}
 
-				input {
+ .images img{
+ 	width: 45%;
+ }
 
-				}
+
+@media screen and (min-width:600px) {
+   .one {
+		background-color: #33334c;
+		width: 10%;
+		height: 100%;
+		position: absolute;
+		left: -200px;
+		bottom: 0;
+		box-shadow: 4px 1px 5px #888888;
+	}
+
+}
+@media screen and (max-width:599px) {
+  	.one {
+		background-color: #33334c;
+		width: 30%;
+		height: 90%;
+		position: absolute;
+		left: -1000px;
+		bottom: 0;
+	box-shadow: 4px 1px 5px #888888;
+	z-index: 4;
+	}
+	#show, #hide  {
+		width: 30%;
+	}
+
+	header {
+		height: 19%;
+			}
+	header h1 {
+		text-align: center;
+		vertical-align: middle;
+		top: 19%;
+		position: relative;
+
+	}
+		#show img, #hide img {
+	top: 25%;
+	position: absolute;
+	}
+
+.sns {
+		left: 43%;
+	}
+.title {
+		left: 40%;
+	}
+
+}
+
+
 </style>
 
 
 
 </head>
 <body data-pinterest-extension-installed="cr1.36">
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-62493734-1', 'auto');
-  ga('send', 'pageview');
-
-
-
-</script>
-
-
 	<script>
 window.addEventListener('load', function() {
     new FastClick(document.body);
@@ -192,7 +239,7 @@ $(document).ready(function(){
         $("#hide img").show();
     });
     $("#hide").click(function(){
-        $(".one").animate({left: '-200px'}, 500 );
+        $(".one").animate({left: '-800px'}, 500 );
         $("#hide img").hide();
         $("#hide").hide();
         $("#show img").show();
@@ -226,23 +273,6 @@ $(".back").click(function(){
 
  });
 </script>
-		
-<script>
-	$(document).ready(function(){
-		var headclix = 0;
-		$("#back").click(function() {			
-			if (headclix < 3){
-				$("#back").animate({left: "+=-367px"}, 500 );
-				headclix+=1;
-				}
-
-			else{
-				$("#back").animate({left: "0px"}, 500 );
-				headclix += 0;
-				}
-		});
-	});
-</script>
 <header>
 	<h1>MUNI</h1>
 	<div id="show">
@@ -253,22 +283,31 @@ $(".back").click(function(){
 	</div>
 </header>
 <div class="content">
-
-	<div class="title"><h2>muni</h2>
-		<input type="text" name="ID" value=""></div>
-
-	<div id="back" class="face"><img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfMU5QN1FUdl9mVmM"></div>
-			<script src="scripts/jquery-1.6.2.min.js"></script>
-
-
-<!--배경 바꾸기 자바스크립트-->
-
-<div class="sns">
-<img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfejVBQTV4SFo5bzg" alt="">
-<img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfejczZ09tRnl6Y1E" alt="">
-<img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfdFNpSDN1cGhMTk0" alt="">
-</div>
-
+	<div class="title">
+		<h2>muni</h2>
+	</div>
+	<div id="container">
+	<div class="images" id="back">
+          <img src="https://s-media-cache-ak0.pinimg.com/736x/58/85/78/5885781816cdb92a5486de0d256a3f7e.jpg" id="mainImage" alt="Image">
+          <script>
+           var myImage=document.getElementById("mainImage"); //이미지태그를 불러옵니다.
+           var imageArray=["https://s-media-cache-ak0.pinimg.com/736x/dd/5a/e1/dd5ae150e043b4114cc6a4128c89deeb.jpg","https://s-media-cache-ak0.pinimg.com/736x/e6/04/83/e60483df64f74fa2bf2d3966105302b6.jpg","https://s-media-cache-ak0.pinimg.com/736x/dc/b5/60/dcb5603e99423ba079b771af1e6c80f4.jpg"];     //적용시킬 이미지를 순서대로 나열시킵니다.
+            var imageIndex=0;
+            function changeImage(){
+            myImage.setAttribute("src",imageArray[imageIndex]);    //변수를 불러와서 이미지태그에 적용시킵니다.
+            imageIndex++;
+              if(imageIndex>=imageArray.length){
+                        	       	imageIndex=0;
+                            	}
+                            }
+                            setInterval(changeImage,4000);  //합수의 시간을 조정합니다.
+            </script>
+    </div>
+	<div class="sns">
+	<img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfejVBQTV4SFo5bzg" alt="twitter">
+	<img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfejczZ09tRnl6Y1E" alt="facebook">
+	<img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfdFNpSDN1cGhMTk0" alt="kakao">
+	</div>
 </div>
 	<div class="one">
 		<ol>
@@ -279,7 +318,7 @@ $(".back").click(function(){
 				<a href="#"><img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfVnNNUmZXU1VrWVE" alt=""></a>
 				<div id="sample">
 					<ul>
-						<li><a href="muni-gallary.html">flower</a></li>
+						<li><a href="#">flower</a></li>
 						<li><a href="#">nature</a></li>
 					</ul>
 				</div>
