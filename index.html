@@ -290,17 +290,17 @@ $(".back").click(function(){
 	<div class="images" id="back">
           <img src="https://s-media-cache-ak0.pinimg.com/736x/58/85/78/5885781816cdb92a5486de0d256a3f7e.jpg" id="mainImage" alt="Image">
           <script>
-           var myImage=document.getElementById("mainImage"); //이미지태그를 불러옵니다.
+           var myImage=document.getElementById("mainImage"); 
            var imageArray=["https://s-media-cache-ak0.pinimg.com/736x/dd/5a/e1/dd5ae150e043b4114cc6a4128c89deeb.jpg","https://s-media-cache-ak0.pinimg.com/736x/e6/04/83/e60483df64f74fa2bf2d3966105302b6.jpg","https://s-media-cache-ak0.pinimg.com/736x/dc/b5/60/dcb5603e99423ba079b771af1e6c80f4.jpg"];     //적용시킬 이미지를 순서대로 나열시킵니다.
             var imageIndex=0;
             function changeImage(){
-            myImage.setAttribute("src",imageArray[imageIndex]);    //변수를 불러와서 이미지태그에 적용시킵니다.
+            myImage.setAttribute("src",imageArray[imageIndex]);   
             imageIndex++;
               if(imageIndex>=imageArray.length){
                         	       	imageIndex=0;
                             	}
                             }
-                            setInterval(changeImage,4000);  //합수의 시간을 조정합니다.
+                            setInterval(changeImage,4000); 
             </script>
     </div>
 	<div class="sns">
