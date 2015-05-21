@@ -1,32 +1,24 @@
-<!DOCTYPE HTML>
-<html><head>
+<!DOCTYPE html>
+<html>
+<head>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script type="application/javascript" src="/path/to/fastclick.js"></script>
-<link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet" type="text/css">
-<!-- jQuery library -->
-<script type = 'text/javascript' src = 'jquery-1.4.min.js'></script>
-<meta charset="utf-8"/>
-<!-- iosslider plugin -->
-<script type = 'text/javascript' src = 'jquery.iosslider.js'></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type='application/javascript' src='/path/to/fastclick.js'></script>
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="wookmark.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="scripts/jquery-1.6.2.min.js"></script>
 <title>MUNI</title>
 <style>
-.face{
-	position:relative;
-	left:0px;
-	top:0px;	
-	z-index: 1;
-}
-
 	.one {
 		background-color: #33334c;
 		width: 10%;
-		height: 100%;
+		height: 90%;
+		position: fixed;
 		position: absolute;
 		left: -200px;
 		bottom: 0;
+		top: 10%;
 		box-shadow: 4px 1px 5px #888888;
 	}
 
@@ -38,7 +30,6 @@
 		top: 0;
 		cursor: pointer;
 		-webkit-filter: brightness(50%) opacity(60%) grayscale();
-
 	}
 
 	#show:hover, #hide:hover  {
@@ -50,16 +41,16 @@
 	}
 
 	header {
-
 		width: 100%;
 		height: 10%;
 		position: absolute;
+		position: fixed;
 		left: 0;
 		top: 0;
 		background-color: white;
 		box-shadow: 0px 10px 5px #888888;
-
 	}
+
 	header h1 {
 		text-align: center;
 		padding-left:5%; 
@@ -80,56 +71,114 @@
 		margin:0px; padding:0px;
 	}
 
-	li img {
+	.one li img {
 		width: 20%;
 		margin-left: 36%;
 		padding: 35% 0 35% 0;
 		float: left;
 		display: block;
-
 	}		
+
 	div {
 		display: inline-block;
 	}
+
 	#sample {
 		display: none;
 		width: 93%;
 		height: 100%;
 		text-align: center;
 	}
+
 	#sample li {
 				margin: 20px 0 20px 0;
 				font-family: 'Oswald', sans-serif;
 	}
+
 	a {
 		text-decoration: none;
-				color: black;
+				color: white;
 	}
+
 	.one li img:hover {
 		-webkit-filter: brightness(80%) opacity() grayscale(0);
 	}
-		#gallery li:hover {
+
+	#gallery li:hover {
 		-webkit-filter: brightness(80%) opacity() grayscale(0);
 	}
-	.content {
+
+	#contents {
 		position: absolute;
-		top: 10%;
+		top: 15%;
 		bottom: 0;
-		overflow: hidden;
-		left: 0;
 		width: 100%;
+		z-index: -3;
+		left: 0;
 	}
 
-	#back{
-		width: 3000px;
-		position:relative;
-		margin-left: auto;
-		margin-right: auto;
-		display: block;
-		z-index: -10;
-		-webkit-filter: blur(6px); -moz-filter: blur(6px); -o-filter: blur(6px); -ms-filter: blur(6px); filter: blur(6px);
-		-webkit-filter: brightness(96%) opacity() grayscale(0);
+
+
+	#contents li {
+		float: left;
+		width: 250px;
+		height: 100%;
+		border-radius: 5%;
+		margin: 20px;
+		box-shadow: 4px 1px 5px #888888;
+		padding: 10px;
+		display: inline;
+
+
 	}
+
+	#contents li img {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+
+		border-radius: 5% 5% 0 0;
+
+
+	}
+
+	p {
+		margin-left: 5%;
+	}
+
+
+    #clickMe1, #clickMe2 ,#clickMe3,#clickMe4,#clickMe5,#clickMe6,#clickMe7,#clickMe8,#clickMe9 {
+
+    }
+     #clickMe1:hover,#clickMe2:hover,#clickMe3:hover,#clickMe4:hover,#clickMe5:hover,#clickMe6:hover,#clickMe7:hover,#clickMe8:hover,#clickMe9:hover{
+	opacity: 0.5;
+	 -webkit-transition: opacity .2s ease-out;}
+
+
+    
+}
+ #clickMe1
+ {transition:.3s;}
+ #clickMe2
+ {transition:.3s;}
+ #clickMe3
+ {transition:.3s;}
+ #clickMe4
+ {transition:.3s;}
+ #clickMe5
+ {transition:.3s;}
+ #clickMe6
+ {transition:.3s;}
+ #clickMe7
+ {transition:.3s;}
+ #clickMe8
+ {transition:.3s;}
+ #clickMe9
+ {transition:.3s;}
+
+
+
+
 
 	h2 {
 		text-align: center;
@@ -142,51 +191,9 @@
 		z-index: 3;
 		left: 47%;
 		top: 25%;
-	}
-
-.sns {
-		position: absolute;
-		z-index: 4;
-		left: 48%;
-		top: 80%;
-
 
 	}
-	.sns img{
-			cursor: pointer;
-			border-radius: 50%;
-			background-color: white;
-			width: 30px;
-			height: 30px;
-			float: left;
-			text-align: center;
-			margin-right: 10px;
-			box-shadow: 3px 3px 20px #888888;
-				}
 
- .images img{
- 	width: 45%;
- }
-.ss-q-title {
-	font-size: 16px;
-}
-#container {
-	width: 50%;
-	margin-top: 50px;
-	text-align: center;
-}
-#container div {
-	padding: 10px;
-}
-.ss-question-list {
-
-}
-
-.q1 {
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
-}
 
 @media screen and (min-width:600px) {
    .one {
@@ -198,14 +205,15 @@
 		bottom: 0;
 		box-shadow: 4px 1px 5px #888888;
 	}
-
 }
 @media screen and (max-width:599px) {
   	.one {
 		background-color: #33334c;
 		width: 30%;
-		height: 90%;
+		height: 81%;
 		position: absolute;
+		position: fixed;
+		top: 19%;
 		left: -1000px;
 		bottom: 0;
 	box-shadow: 4px 1px 5px #888888;
@@ -214,6 +222,7 @@
 	#show, #hide  {
 		width: 30%;
 	}
+
 
 	header {
 		height: 19%;
@@ -237,123 +246,156 @@
 		left: 34%;
 	}
 
+#contents li {
+float: left;
+width: 40%;
+border-radius: 5%;
+margin: 20px 10px;
+box-shadow: 4px 1px 5px #888888;
+padding: 2%;
+display: inline;
 }
 
+#contents {
+margin-top: 40px;
+}
+
+}
 
 </style>
 
 
 
 </head>
-<body data-pinterest-extension-installed="cr1.36">
-	<script>
-window.addEventListener('load', function() {
-    new FastClick(document.body);
-}, false);
-$(document).ready(function(){
-    $("#show").click(function(){
-        $(".one").animate({left: 0}, 400 );
-        $("#show img").hide();
-        $("#hide").show();
-        $("#hide img").show();
-    });
-    $("#hide").click(function(){
-        $(".one").animate({left: '-800px'}, 500 );
-        $("#hide img").hide();
-        $("#hide").hide();
-        $("#show img").show();
-    });
-
-});
-
-		  $(function(){
-		     $("#gallery").hover(function(){
-		   $("#sample",this).slideDown("fast");
-		},
-		function(){
-		  $("#sample",this).slideUp("fast");
-		});
+<body>
 
 
-     $(function(){
-	var backclix = 0;
-$(".back").click(function(){
-		if(backclix < 3){
-	 $(".back").animate({left:"+-=1000px"}, 500 );
-        backclix+=1;
-        }
-        else{
-        $(".back").animate({left:"0px"}, 500 );
-        backclix +=0;
-        }
+<script>
+	window.addEventListener('load', function() {
+	    new FastClick(document.body);
+	}, false);
+	$(document).ready(function(){
+	    $("#show").click(function(){
+	        $(".one").animate({left: 0}, 400 );
+	        $("#show img").hide();
+	        $("#hide").show();
+	        $("#hide img").show();
+	    });
+	    $("#hide").click(function(){
+	        $(".one").animate({left: '-200px'}, 500 );
+	        $("#hide img").hide();
+	        $("#hide").hide();
+	        $("#show img").show();
+	    });
+
+	});
+
+	  $(function(){
+	     $("#gallery").hover(function(){
+	   $("#sample",this).slideDown("fast");
+	},
+	function(){
+	  $("#sample",this).slideUp("fast");
+	});
+	     $(document).ready(new function() {
+	// Call the layout function.
+	$('#contents ol li').wookmark({
+		autoResize: true, // This will auto-update the layout when the browser window is resized.
+		container: $('#contents'), // Optional, used for some extra CSS styling
+		offset: 2, // Optional, the distance between grid items
+		itemWidth: 210 // Optional, the width of a grid item
 	});
 });
-
-
- });
+	 });
 </script>
+
 <header>
 	<h1>MUNI</h1>
 	<div id="show">
-		<img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfQWZGMm4wclhOVGs" alt="">
+		<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfQWZGMm4wclhOVGs" alt="">
 	</div>
 	<div id="hide">
-		<img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfV0dfX2I3MXNGbGM" alt="">
+		<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfV0dfX2I3MXNGbGM" alt="">
 	</div>
 </header>
-<div class="content">
+ 
+	<div id="contents">
+		<ol>
+			<li>
+				<div id="clickMe1">
+			<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfamNVazUwTXd6Sjg" />
+			<p></p>
+		</div>
+			</li>
 
-	<div id="container">
-	<div class="q1">
-<form action="https://docs.google.com/forms/d/1X9B5d94v60Mur8sp2oaBLFK9FZVCFo9hcyNEZs8GotE/formResponse" method="POST" id="ss-form" target="_self" onsubmit=""><ol role="list" class="ss-question-list" style="padding-left: 0">
-<div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item  ss-radio"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_566577763"><div class="ss-q-title">패턴은 마음에 드십니까?
-</div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+			<li>
+				<div id="clickMe2">
+			<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfZlIwX2hoOTlVQlE" />
+			<p>삼각형</p>
+		</div>
+			</li>
+			<li>
+				<div id="clickMe3">
+			<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfdXl1bk9fcXdER0U" />
+			<p>빈삼각</p>
+		</div>
+			</li>
+			<li>
+				<div id="clickMe4">
+			<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfU1JvMnF0SXlWMDA" />
+			<p>sample4</p>
+			</div>
+			</li>
+			<li>
+				<div id="clickMe5">
+			<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfWWEyanFBTnhDekU" />
+			<p>sample5</p>
+		</div>
+			</li>
+			<li>
+				<div id="clickMe6">
+			<img src="https://s-media-cache-ak0.pinimg.com/736x/70/58/09/705809cc16eb4557adecb6dc66af5304.jpg">
+			<p>sample6</p>
+		</div>
+			</li>
+			<li>
+				<div id="clickMe7">
+			<img src="https://s-media-cache-ak0.pinimg.com/736x/d9/1d/93/d91d934de0d5037f6d9ff5e8f6d6bca8.jpg">
+			<p>sample7</p>
+		</div>
+			</li>
+			<li>
+				<div id="clickMe8">
+			<img src="https://s-media-cache-ak0.pinimg.com/736x/bd/e2/2d/bde22d3c4a13630651ef8e8ed9ab1a66.jpg">
+			<p>sample8</p>
+		</div>
+			</li>
+			<li>
+				<div id="clickMe9">
+			<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfd2xVZmlnRjVkTm8">
+			<p>sample9</p>
+		</div>
+			</li>
+		</ol>
+		
+		
+		
+		
+		
+		
+		
+		
 
-<ul class="ss-choices" role="radiogroup" aria-label="패턴은 마음에 드십니까?  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1887988802" value="Good" id="group_1887988802_1" role="radio" class="ss-q-radio" aria-label="Good"></span>
-<span class="ss-choice-label">Good</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1887988802" value="soso" id="group_1887988802_2" role="radio" class="ss-q-radio" aria-label="soso"></span>
-<span class="ss-choice-label">soso</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1887988802" value="nono!" id="group_1887988802_3" role="radio" class="ss-q-radio" aria-label="nono!"></span>
-<span class="ss-choice-label">nono!</span>
-</label></li></ul>
-<div class="error-message" id="566577763_errorMessage"></div>
-</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
-<div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_1854795452"><div class="ss-q-title">추가하고 싶거나, 추가할 패턴 요소를 이메일(<a href="mailto:emcis44@gmail.com">emcis44@gmail.com</a>)으로 보내주시면, 요소 목록에 추가해드립니다.
-</div>
-<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-<input type="text" name="entry.1854795452" value="" class="ss-q-short" id="entry_1854795452" dir="auto" aria-label="추가하고 싶거나, 추가할 패턴 요소를 이메일(emcis44@gmail.com)으로 보내주시면, 요소 목록에 추가해드립니다.  " title="">
-<div class="error-message" id="1071110644_errorMessage"></div>
-</div>
-</div></div></div>
-<input type="hidden" name="draftResponse" value="[,,&quot;983219688455240410&quot;]
-">
-<input type="hidden" name="pageHistory" value="0">
-
-
-<input type="hidden" name="fbzx" value="983219688455240410">
-
-<div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
-<input type="submit" name="submit" value="보내기" id="ss-submit" class="jfk-button jfk-button-action ">
-</td>
-</tr></tbody></table></div></ol></form>
-    </div>
-	<div class="sns">
-	<img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfejVBQTV4SFo5bzg" alt="twitter">
-	<img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfejczZ09tRnl6Y1E" alt="facebook">
-	<img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfdFNpSDN1cGhMTk0" alt="kakao">
+		
 	</div>
-</div>
+
 	<div class="one">
 		<ol>
 			<li>
-				<a href="index.html"><img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfZ19oT1JNVnhEVjQ" alt=""></a>
+				<a href="index.html"><img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfZ19oT1JNVnhEVjQ" alt=""></a>
 			</li>
 			<li id="gallery">
-				<a href="#"><img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfVnNNUmZXU1VrWVE" alt=""></a>
+				<a href=#><img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfVnNNUmZXU1VrWVE" alt=""></a>
 				<div id="sample">
 					<ul>
 						<li><a href="muni-basic.html">basic</a></li>
@@ -362,14 +404,12 @@ $(".back").click(function(){
 				</div>
 			</li>
 			<li>
-				<a href="muni-make.html"><img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfTU1nOG5NaXhPcmc" alt="요소 만들가"></a>
+				<a href=#><img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfTU1nOG5NaXhPcmc" alt=""></a>
 			</li>
 			<li>
-				<a href="muni-"><img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfekpWSjhXT0ZQazA" alt="주문페이지"></a>
+				<a href=#><img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfekpWSjhXT0ZQazA" alt=""></a>
 			</li>
 		</ol>
 	</div>
-
-
-
-<span style="height: 20px; width: 40px; position: absolute; opacity: 0.85; z-index: 8675309; display: none; cursor: pointer; border: none; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAUCAYAAAD/Rn+7AAADU0lEQVR42s2WXUhTYRjHz0VEVPRFUGmtVEaFUZFhHxBhsotCU5JwBWEf1EWEEVHQx4UfFWYkFa2biPJiXbUta33OXFtuUXMzJ4bK3Nqay7m5NeZq6h/tPQ+xU20zugjOxR/+7/O8539+5znnwMtNTExwJtMb3L/fiLv3botCSmUjeCaejTOb39AiFothfHxcFIrHY8RksZjBsckJcOIRMfFsHD/SsbExUYpnI8DR0dGUGjSb0byhEJp5Uqg5CTSzc2CQleJbMEj9/ywBcGRkJEk9DQqouEVQT1sK444yWI9UonmTjGqauVLEIlHa9x8lAMbj8SSpp0rwKGMVvg8P46vbg0C7na8z8JsMcgHe7jlEa+edRhiLy8n/TUMfu6EvLElk+U0WtGwrTrdfAGQf5J8iiK4LVzDU28t8JtMSocf8E+l68myaNFXm/6rXslLK7ay5TOunuRvZWpJuvwAYjUaTpOIWoquuAZ219RTaxKYp9BbjycoN5FvL9qH9TBX5rvoGdJythvXYSTxdtRnWylO/ZdqrLsGwszzhWQ593z2KlAwCYCQSSZJ6ehZ0W7bD9VBLgN0NCqr3qR7R2rBrL3pu3Sb/7nDlz2uy6cG0OXk0GTbZXzNp8trsPAQdTj6frlWzN2DcXZGKQQAMh8NJ6rpyHe+PnkCr/CAFdZyvpfpjuvkifLF9wIt1Wwlo0OHie1RvWrKa93RjzfzliTzPKz3ltB0/Tevmwp14wGUgHAzSOoUEwFAolFaaBSuhnslPRkJexUJtZ6v5HtUeLswl33n1BgEY5fvhs9sJ3FAiT+QYyyvoAQJuD0KBAFRTJNAuz5/s3gJgMBhMJwrVFRThM5tY5zUF/A4X1f2fvQTRLCuBreoim0YmAbqNJryvPEXeeq46kaNdkQ/1HCncbJKPs9ZSv2VHGfWsZ2hfkhKAfr8/pdxWKx4wwD69PmVfNSOL+lr2w+gYqHpWDtXt1xQ8AMlWU0e1lqLd/APRHoP8AJqWrQG9gYxcPMsvSJUvAA4MDKTUJ7MZLaVy8v+qT21tcDx/OemePr0RTkNrur4A6PP5xCgBsL+/X4wiQDpuuVxOeL1eMYmYeDY6sOp0z+B0OuHxeEQhxkJMFosJiSO/UinOI/8Pc+l7KKArAT8AAAAASUVORK5CYII=); background-color: transparent;"></span></body></html>
+</body>
+</html>
