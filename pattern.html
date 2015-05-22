@@ -1,0 +1,135 @@
+<html><head>
+<meta charset="UTF-8">
+<title>MUNI</title>
+<meta name="description" content="無料でパターン素材を作れます。">
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=320, initial-scale=1.0, user-scalable=yes, maximum-scale=2.0, minimum-scale=1.0, ">
+<script language="javascript">
+<!--
+function navi(obj) {
+ sel = obj.options[obj.selectedIndex].value;
+ document.getElementById("myImg").src = "./dot/NO"+sel+".png";
+
+}
+//-->
+</script>
+<script type="text/javascript" src="cpick.js"></script>
+
+</head>
+<body data-pinterest-extension-installed="cr1.37">
+<div id="main">
+<header>
+
+<h1>PATTERN MAKER</h1>
+</header>
+<nav>
+<center>
+<form method="post">
+<select onchange="navi(this)">
+<option value="1">NO.1</option>
+<option value="2">NO.2</option>
+<option value="3">NO.3</option>
+</select>
+</form>
+</center>
+</nav>
+<article>
+		
+<center>
+<img id="myImg" src="./dot/NO1.png">
+<br>
+<form method="post">
+<table>
+<tbody><tr>
+<td>
+file size
+</td>
+<td>
+<select name="size">
+<option value="200">200✕200</option>
+<option value="400" selected="">400✕400</option>
+<option value="800">800✕800</option>
+</select>
+</td>
+</tr><tr>
+<td>
+element size
+</td>
+<td>
+<input size="4" type="text" maxlength="3" name="dot_size" value="1">
+</td>
+</tr><tr>
+<td>
+density
+</td>
+<td>
+<select name="space">
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="8">8</option>
+<option value="10" selected="">10</option>
+<option value="20">20</option>
+<option value="25">25</option>
+<option value="40">40</option>
+<option value="50">50</option>
+<option value="100">100</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>
+element color
+</td>
+<td>
+<input type="text" name="color" value="#808080" size="7" id="t2" class="html5jp-cpick [coloring:true;width:180;height:100;]" style="color: rgb(0, 0, 0); background-color: rgb(128, 128, 128);">
+</td>
+</tr>
+<tr>
+<td>
+background color
+</td>
+<td>
+<input type="text" name="color2" value="#ffffff" size="7" id="t2" class="html5jp-cpick [coloring:true;width:180;height:100;]" style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
+</td>
+</tr>
+<tr>
+<td>
+rotation
+</td>
+<td>
+<select name="kaiten">
+<option value="0" selected="">0度</option>
+<option value="45">45度</option>
+</select>
+</td>
+</tr>
+<tr>
+<td>file form</td>
+<td>
+<select name="f_type">
+<option value="png" selected="">png</option>
+<option value="gif">gif</option>
+</select>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<center>
+<br>
+<input type="submit" value="View your pattern">
+</center>
+</td>
+</tr>
+</tbody></table>
+
+</form>
+
+
+</center>
+
+</article>
+<footer>
+<p><a href="index.html">- initialization -</a></p>
+</footer>
+</div>
+</body></html>
