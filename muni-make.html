@@ -1,135 +1,354 @@
+<!DOCTYPE HTML>
 <html><head>
-<meta charset="UTF-8">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="application/javascript" src="/path/to/fastclick.js"></script>
+<link href="http://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet" type="text/css">
+<!-- jQuery library -->
+<script type = 'text/javascript' src = 'jquery-1.4.min.js'></script>
+
+<!-- iosslider plugin -->
+<script type = 'text/javascript' src = 'jquery.iosslider.js'></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="scripts/jquery-1.6.2.min.js"></script>
 <title>MUNI</title>
-<meta name="description" content="無料でパターン素材を作れます。">
-<link rel="stylesheet" href="style.css">
-<meta name="viewport" content="width=320, initial-scale=1.0, user-scalable=yes, maximum-scale=2.0, minimum-scale=1.0, ">
-<script language="javascript">
-<!--
-function navi(obj) {
- sel = obj.options[obj.selectedIndex].value;
- document.getElementById("myImg").src = "./dot/NO"+sel+".png";
+<style>
+.face{
+	position:relative;
+	left:0px;
+	top:0px;	
+	z-index: 1;
+}
+
+	.one {
+		background-color: #33334c;
+		width: 10%;
+		height: 100%;
+		position: absolute;
+		left: -200px;
+		bottom: 0;
+		box-shadow: 4px 1px 5px #888888;
+	}
+
+	#show, #hide  {
+		width: 10%;
+		position: absolute;
+		height: 100%;
+		left: 0;
+		top: 0;
+		cursor: pointer;
+		-webkit-filter: brightness(50%) opacity(60%) grayscale();
+
+	}
+
+	#show:hover, #hide:hover  {
+		-webkit-filter: brightness(100%) opacity() grayscale(0);
+	}
+
+	#hide {
+		display: none;
+	}
+
+	header {
+
+		width: 100%;
+		height: 10%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-color: white;
+		box-shadow: 0px 10px 5px #888888;
+
+	}
+	header h1 {
+		text-align: center;
+		padding-left:5%; 
+		padding-top: -3%; 
+	}
+
+	#show img, #hide img {
+		width: 20%;
+		margin-left: 35%;
+		float: left;
+		margin-top: 18%;
+		display: block;
+	}
+
+
+	ol, ul {
+		list-style: none;
+		margin:0px; padding:0px;
+	}
+
+	li img {
+		width: 20%;
+		margin-left: 36%;
+		padding: 35% 0 35% 0;
+		float: left;
+		display: block;
+
+	}		
+	div {
+		display: inline-block;
+	}
+	#sample {
+		display: none;
+		width: 93%;
+		height: 100%;
+		text-align: center;
+	}
+	#sample li {
+				margin: 20px 0 20px 0;
+				font-family: 'Oswald', sans-serif;
+	}
+	a {
+		text-decoration: none;
+				color: white;
+	}
+	.one li img:hover {
+		-webkit-filter: brightness(80%) opacity() grayscale(0);
+	}
+		#gallery li:hover {
+		-webkit-filter: brightness(80%) opacity() grayscale(0);
+	}
+	.content {
+		position: absolute;
+		top: 10%;
+		bottom: 0;
+		overflow: hidden;
+		left: 0;
+		width: 100%;
+	}
+
+	#back{
+		width: 3000px;
+		position:relative;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		z-index: -10;
+		-webkit-filter: blur(6px); -moz-filter: blur(6px); -o-filter: blur(6px); -ms-filter: blur(6px); filter: blur(6px);
+		-webkit-filter: brightness(96%) opacity() grayscale(0);
+	}
+
+	h2 {
+		text-align: center;
+		color: white;
+		font-size: 60px;
+		font-family: 'Permanent Marker', cursive;
+	}
+	.title {
+		position: absolute;
+		z-index: 3;
+		left: 47%;
+		top: 25%;
+	}
+
+.sns {
+		position: absolute;
+		z-index: 4;
+		left: 48%;
+		top: 80%;
+
+
+	}
+	.sns img{
+			cursor: pointer;
+			border-radius: 50%;
+			background-color: white;
+			width: 30px;
+			height: 30px;
+			float: left;
+			text-align: center;
+			margin-right: 10px;
+			box-shadow: 3px 3px 20px #888888;
+				}
+
+ .images img{
+ 	width: 45%;
+ }
+
+
+@media screen and (min-width:600px) {
+   .one {
+		background-color: #33334c;
+		width: 10%;
+		height: 100%;
+		position: absolute;
+		left: -200px;
+		bottom: 0;
+		box-shadow: 4px 1px 5px #888888;
+	}
 
 }
-//-->
-</script>
-<script type="text/javascript" src="cpick.js"></script>
+@media screen and (max-width:599px) {
+  	.one {
+		background-color: #33334c;
+		width: 30%;
+		height: 90%;
+		position: absolute;
+		left: -1000px;
+		bottom: 0;
+	box-shadow: 4px 1px 5px #888888;
+	z-index: 4;
+	}
+	#show, #hide  {
+		width: 30%;
+	}
+
+	header {
+		height: 19%;
+			}
+	header h1 {
+		text-align: center;
+		vertical-align: middle;
+		top: 19%;
+		position: relative;
+
+	}
+		#show img, #hide img {
+	top: 25%;
+	position: absolute;
+	}
+
+.sns {
+		left: 37%;
+	}
+.title {
+		left: 34%;
+	}
+
+}
+
+.button {
+	display: block;
+
+
+
+}
+
+ #container {
+ 	text-align: center;
+ 	display: block;
+ 	margin: auto;
+ 	padding-top: 100px;
+
+ }
+
+</style>
+
+
 
 </head>
-<body data-pinterest-extension-installed="cr1.37">
-<div id="main">
+<body data-pinterest-extension-installed="cr1.36">
+	<script>
+window.addEventListener('load', function() {
+    new FastClick(document.body);
+}, false);
+$(document).ready(function(){
+    $("#show").click(function(){
+        $(".one").animate({left: 0}, 400 );
+        $("#show img").hide();
+        $("#hide").show();
+        $("#hide img").show();
+    });
+    $("#hide").click(function(){
+        $(".one").animate({left: '-800px'}, 500 );
+        $("#hide img").hide();
+        $("#hide").hide();
+        $("#show img").show();
+    });
+
+});
+
+		  $(function(){
+		     $("#gallery").hover(function(){
+		   $("#sample",this).slideDown("fast");
+		},
+		function(){
+		  $("#sample",this).slideUp("fast");
+		});
+
+
+     $(function(){
+	var backclix = 0;
+$(".back").click(function(){
+		if(backclix < 3){
+	 $(".back").animate({left:"+-=1000px"}, 500 );
+        backclix+=1;
+        }
+        else{
+        $(".back").animate({left:"0px"}, 500 );
+        backclix +=0;
+        }
+	});
+});
+
+
+ });
+</script>
 <header>
-
-<h1>PATTERN MAKER</h1>
+	<h1>MUNI</h1>
+	<div id="show">
+		<img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfQWZGMm4wclhOVGs" alt="">
+	</div>
+	<div id="hide">
+		<img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfV0dfX2I3MXNGbGM" alt="">
+	</div>
 </header>
-<nav>
-<center>
-<form method="post">
-<select onchange="navi(this)">
-<option value="1">NO.1</option>
-<option value="2">NO.2</option>
-<option value="3">NO.3</option>
-</select>
-</form>
-</center>
-</nav>
-<article>
-		
-<center>
-<img id="myImg" src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfamNVazUwTXd6Sjg">
-<br>
-<form method="post">
-<table>
-<tbody><tr>
-<td>
-file size
-</td>
-<td>
-<select name="size">
-<option value="200">200✕200</option>
-<option value="400" selected="">400✕400</option>
-<option value="800">800✕800</option>
-</select>
-</td>
-</tr><tr>
-<td>
-element size
-</td>
-<td>
-<input size="4" type="text" maxlength="3" name="dot_size" value="1">
-</td>
-</tr><tr>
-<td>
-density
-</td>
-<td>
-<select name="space">
-<option value="4">4</option>
-<option value="5">5</option>
-<option value="8">8</option>
-<option value="10" selected="">10</option>
-<option value="20">20</option>
-<option value="25">25</option>
-<option value="40">40</option>
-<option value="50">50</option>
-<option value="100">100</option>
-</select>
-</td>
-</tr>
-<tr>
-<td>
-element color
-</td>
-<td>
-<input type="text" name="color" value="#808080" size="7" id="t2" class="html5jp-cpick [coloring:true;width:180;height:100;]" style="color: rgb(0, 0, 0); background-color: rgb(128, 128, 128);">
-</td>
-</tr>
-<tr>
-<td>
-background color
-</td>
-<td>
-<input type="text" name="color2" value="#ffffff" size="7" id="t2" class="html5jp-cpick [coloring:true;width:180;height:100;]" style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">
-</td>
-</tr>
-<tr>
-<td>
-rotation
-</td>
-<td>
-<select name="kaiten">
-<option value="0" selected="">0度</option>
-<option value="45">45度</option>
-</select>
-</td>
-</tr>
-<tr>
-<td>file form</td>
-<td>
-<select name="f_type">
-<option value="png" selected="">png</option>
-<option value="gif">gif</option>
-</select>
-</td>
-</tr>
-<tr>
-<td colspan="2">
-<center>
-<br>
-<a href="pattern.html"><input type="submit" value="View your pattern"></a>
-</center>
-</td>
-</tr>
-</tbody></table>
-
-</form>
+<div class="content">
+	<div id="container">
+	<img src="http://drive.google.com/uc?export=view&id=0BxHR587h2CKfM1R1bURqQTdRUFU" id="lamp" width="32" height="32">
+<p>Canvas:</p>
 
 
-</center>
-
-</article>
-<footer>
-<p><a href="index.html">- initialization -</a></p>
-</footer>
+<canvas id="myCanvas" width="300" height="300" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+<div class="button">
+<button onclick="draw('repeat')">Repeat</button> 
+<button onclick="draw('repeat-x')">Repeat-x</button> 
+<button onclick="draw('repeat-y')">Repeat-y</button> 
+<button onclick="draw('no-repeat')">No-repeat</button>  
 </div>
-</body></html>
+
+</div>
+	<div class="one">
+		<ol>
+			<li>
+				<a href="index.html"><img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfZ19oT1JNVnhEVjQ" alt=""></a>
+			</li>
+			<li id="gallery">
+				<a href="#"><img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfVnNNUmZXU1VrWVE" alt=""></a>
+				<div id="sample">
+					<ul>
+						<li><a href="muni-basic.html">basic</a></li>
+						<li><a href="muni-gallary.html">nature</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="muni-make.html"><img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfTU1nOG5NaXhPcmc" alt="요소 만들가"></a>
+			</li>
+			<li>
+				<a href="muni-"><img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfekpWSjhXT0ZQazA" alt="주문페이지"></a>
+			</li>
+		</ol>
+	</div>
+
+
+
+<span style="height: 20px; width: 40px; position: absolute; opacity: 0.85; z-index: 8675309; display: none; cursor: pointer; border: none; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAUCAYAAAD/Rn+7AAADU0lEQVR42s2WXUhTYRjHz0VEVPRFUGmtVEaFUZFhHxBhsotCU5JwBWEf1EWEEVHQx4UfFWYkFa2biPJiXbUta33OXFtuUXMzJ4bK3Nqay7m5NeZq6h/tPQ+xU20zugjOxR/+7/O8539+5znnwMtNTExwJtMb3L/fiLv3botCSmUjeCaejTOb39AiFothfHxcFIrHY8RksZjBsckJcOIRMfFsHD/SsbExUYpnI8DR0dGUGjSb0byhEJp5Uqg5CTSzc2CQleJbMEj9/ywBcGRkJEk9DQqouEVQT1sK444yWI9UonmTjGqauVLEIlHa9x8lAMbj8SSpp0rwKGMVvg8P46vbg0C7na8z8JsMcgHe7jlEa+edRhiLy8n/TUMfu6EvLElk+U0WtGwrTrdfAGQf5J8iiK4LVzDU28t8JtMSocf8E+l68myaNFXm/6rXslLK7ay5TOunuRvZWpJuvwAYjUaTpOIWoquuAZ219RTaxKYp9BbjycoN5FvL9qH9TBX5rvoGdJythvXYSTxdtRnWylO/ZdqrLsGwszzhWQ593z2KlAwCYCQSSZJ6ehZ0W7bD9VBLgN0NCqr3qR7R2rBrL3pu3Sb/7nDlz2uy6cG0OXk0GTbZXzNp8trsPAQdTj6frlWzN2DcXZGKQQAMh8NJ6rpyHe+PnkCr/CAFdZyvpfpjuvkifLF9wIt1Wwlo0OHie1RvWrKa93RjzfzliTzPKz3ltB0/Tevmwp14wGUgHAzSOoUEwFAolFaaBSuhnslPRkJexUJtZ6v5HtUeLswl33n1BgEY5fvhs9sJ3FAiT+QYyyvoAQJuD0KBAFRTJNAuz5/s3gJgMBhMJwrVFRThM5tY5zUF/A4X1f2fvQTRLCuBreoim0YmAbqNJryvPEXeeq46kaNdkQ/1HCncbJKPs9ZSv2VHGfWsZ2hfkhKAfr8/pdxWKx4wwD69PmVfNSOL+lr2w+gYqHpWDtXt1xQ8AMlWU0e1lqLd/APRHoP8AJqWrQG9gYxcPMsvSJUvAA4MDKTUJ7MZLaVy8v+qT21tcDx/OemePr0RTkNrur4A6PP5xCgBsL+/X4wiQDpuuVxOeL1eMYmYeDY6sOp0z+B0OuHxeEQhxkJMFosJiSO/UinOI/8Pc+l7KKArAT8AAAAASUVORK5CYII=); background-color: transparent;"></span></body></html>
+<script>
+
+function draw(direction) {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.clearRect(0, 0, c.width, c.height); 
+    var img = document.getElementById("lamp")
+    var pat = ctx.createPattern(img, direction);
+    ctx.rect(0, 0, 300, 300);
+    ctx.fillStyle = pat;
+    ctx.fill();
+}
+
+</script>
