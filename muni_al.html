@@ -144,26 +144,6 @@
 		top: 25%;
 	}
 
-.sns {
-		position: absolute;
-		z-index: 4;
-		left: 48%;
-		top: 80%;
-
-
-	}
-	.sns img{
-			cursor: pointer;
-			border-radius: 50%;
-			background-color: white;
-			width: 30px;
-			height: 30px;
-			float: left;
-			text-align: center;
-			margin-right: 10px;
-			box-shadow: 3px 3px 20px #888888;
-				}
-
  .images img{
  	width: 45%;
  }
@@ -175,17 +155,16 @@
 	margin-top: 50px;
 	text-align: center;
 }
-#container div {
-	padding: 10px;
-}
-.ss-question-list {
 
-}
 
 .q1 {
+	padding: 10px;
 	margin-left: auto;
 	margin-right: auto;
-	position: relative;
+	display: block;
+	width: 500px;
+	position: absolute;
+
 }
 
 @media screen and (min-width:600px) {
@@ -230,9 +209,7 @@
 	position: absolute;
 	}
 
-.sns {
-		left: 37%;
-	}
+
 .title {
 		left: 34%;
 	}
@@ -308,46 +285,51 @@ $(".back").click(function(){
 <form action="https://docs.google.com/forms/d/1X9B5d94v60Mur8sp2oaBLFK9FZVCFo9hcyNEZs8GotE/formResponse" method="POST" id="ss-form" target="_self" onsubmit=""><ol role="list" class="ss-question-list" style="padding-left: 0">
 <div class="ss-form-question errorbox-good" role="listitem">
 <div dir="ltr" class="ss-item  ss-radio"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_566577763"><div class="ss-q-title">패턴은 마음에 드십니까?
+<label class="ss-q-item-label" for="entry_566577763"><div class="ss-q-title">세 가지 예시중에서 선택해 주세요. 예시는 세 번째 메뉴에서 볼 수 있습니다.
 </div>
 <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
 
-<ul class="ss-choices" role="radiogroup" aria-label="패턴은 마음에 드십니까?  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1887988802" value="Good" id="group_1887988802_1" role="radio" class="ss-q-radio" aria-label="Good"></span>
-<span class="ss-choice-label">Good</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1887988802" value="soso" id="group_1887988802_2" role="radio" class="ss-q-radio" aria-label="soso"></span>
-<span class="ss-choice-label">soso</span>
-</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1887988802" value="nono!" id="group_1887988802_3" role="radio" class="ss-q-radio" aria-label="nono!"></span>
-<span class="ss-choice-label">nono!</span>
+<ul class="ss-choices" role="radiogroup" aria-label="세 가지 예시중에서 선택해 주세요. 예시는 세 번째 메뉴에서 볼 수 있습니다.  "><li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1887988802" value="타입A (기본)" id="group_1887988802_1" role="radio" class="ss-q-radio" aria-label="타입A (기본)"></span>
+<span class="ss-choice-label">타입A (기본)</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1887988802" value="타입B (랜덤 배치)" id="group_1887988802_2" role="radio" class="ss-q-radio" aria-label="타입B (랜덤 배치)"></span>
+<span class="ss-choice-label">타입B (랜덤 배치)</span>
+</label></li> <li class="ss-choice-item"><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1887988802" value="타입C" id="group_1887988802_3" role="radio" class="ss-q-radio" aria-label="타입C"></span>
+<span class="ss-choice-label">타입C</span>
 </label></li></ul>
 <div class="error-message" id="566577763_errorMessage"></div>
 </div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
 <div dir="ltr" class="ss-item  ss-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_1854795452"><div class="ss-q-title">추가하고 싶거나, 추가할 패턴 요소를 이메일(<a href="mailto:emcis44@gmail.com">emcis44@gmail.com</a>)으로 보내주시면, 요소 목록에 추가해드립니다.
+<label class="ss-q-item-label" for="entry_1854795452"><div class="ss-q-title">추가하고 싶거나, 추가할 패턴 요소, 원하는 패턴 요소를 이메일(<a href="mailto:emcis44@gmail.com">emcis44@gmail.com</a>)이나 링크로 보내주시면,  muni 사이트에 이름과 함께 올려드립니다.
 </div>
+<br>
 <div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
-<input type="text" name="entry.1854795452" value="" class="ss-q-short" id="entry_1854795452" dir="auto" aria-label="추가하고 싶거나, 추가할 패턴 요소를 이메일(emcis44@gmail.com)으로 보내주시면, 요소 목록에 추가해드립니다.  " title="">
+<input type="text" name="entry.1854795452" value="" class="ss-q-short" id="entry_1854795452" dir="auto" aria-label="추가하고 싶거나, 추가할 패턴 요소, 원하는 패턴 요소를 이메일(emcis44@gmail.com)이나 링크로 보내주시면,  muni 사이트에 이름과 함께 올려드립니다.  " title="">
 <div class="error-message" id="1071110644_errorMessage"></div>
-</div>
+
+</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+<div dir="ltr" class="ss-item  ss-paragraph-text"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_953625900"><div class="ss-q-title">muni 홈페이지에 더 수정되어야 하는 부분이 있으면 구체적으로 도움을 주세요. 의견을 반영하여 수정합니다 :D
+</div><br>
+<div class="ss-q-help ss-secondary-text" dir="ltr"></div></label>
+<textarea name="entry.953625900" rows="8" cols="0" class="ss-q-long" id="entry_953625900" dir="auto" aria-label="muni 홈페이지에 더 수정되어야 하는 부분이 있으면 구체적으로 도움을 주세요. 의견을 반영하여 수정합니다 :D  "></textarea>
+<div class="error-message" id="794594030_errorMessage"></div>
+
 </div></div></div>
-<input type="hidden" name="draftResponse" value="[,,&quot;983219688455240410&quot;]
+<input type="hidden" name="draftResponse" value="[,,&quot;-3372298461497947359&quot;]
 ">
 <input type="hidden" name="pageHistory" value="0">
 
 
-<input type="hidden" name="fbzx" value="983219688455240410">
+<input type="hidden" name="fbzx" value="-3372298461497947359">
 
-<div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+<div class="ss-item ss-navigate"><table id="navigation-table"><tbody><br><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
 <input type="submit" name="submit" value="보내기" id="ss-submit" class="jfk-button jfk-button-action ">
 </td>
 </tr></tbody></table></div></ol></form>
     </div>
-	<div class="sns">
-	<img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfejVBQTV4SFo5bzg" alt="twitter">
-	<img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfejczZ09tRnl6Y1E" alt="facebook">
-	<img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfdFNpSDN1cGhMTk0" alt="kakao">
-	</div>
+	
 </div>
-	<div class="one">
+		<div class="one">
 		<ol>
 			<li>
 				<a href="index.html"><img src="http://drive.google.com/uc?export=view&amp;id=0BxHR587h2CKfZ19oT1JNVnhEVjQ" alt=""></a>
